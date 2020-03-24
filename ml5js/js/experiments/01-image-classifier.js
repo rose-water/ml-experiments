@@ -32,7 +32,7 @@ function displayResults(results) {
   let resultItems = results.map(result => {
     return `
       <p>
-        Label: ${ result["label"] } <br/>
+        <span class="result-label">${ result["label"] }</span><br/>
         Confidence: ${ result["confidence"] }
       </p>
     `

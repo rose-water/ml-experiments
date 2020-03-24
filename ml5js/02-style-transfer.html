@@ -5,31 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <title>02 Style Transfer</title>
     <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-
+    <link rel="stylesheet" href="../style.css">
     <style>
+      html, body {
+        height: 100vh;
+        width: 100vw;
+      }
+
       #image-inputs {
         display: flex;
         margin-top: 1em;
       }
 
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       .input-container {
-        margin: 1em;
+        margin: 1.4em;
+      }
+
+      h1#title {
+        color: blue;
+        margin-right: 1em;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      #equals {
+        display: flex;
+        align-items: center;        
       }
 
     </style>
   </head>
   <body>
+    <h1 id="title">02 Style Transfer</h1>
     <div class="input-container">
-      <h2>Reference image</h2>
+      <h2>Style (Udnie, <i>Young American Girl</i>)</h2>
       <img id="style-transfer-img" src="./assets/udnie.jpg">
+    </div>
+    <div>
+      <h1>+</h1>
     </div>
     <div id="image-inputs">
       <div class="input-container">
-        <h2>Input</h2>
+        <h2>Input (Ghibli film landscape)</h2>
         <img id="input" src="./assets/ghibli.jpg">
       </div>
+      <div id="equals">
+        <h1>=</h1>
+      </div>
       <div class="input-container">
-        <h2>Output</h2>
+        <h2>Target (Output)</h2>
+        <span id="status">Generating output...</span>
         <img id="output">
       </div>
     </div>

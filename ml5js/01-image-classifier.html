@@ -5,16 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <title>01 Hello World - Image Classifier</title>
     <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-
+    <link rel="stylesheet" href="../style.css">
     <style>
+      html, body {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       #jelly {
         width: 30vw;
         height: auto;
       }
+
+      #container {
+        display: flex;
+        align-items: center;
+	      justify-content: center;
+      }
+
+      #results {
+        margin-left: 2em;
+      }
+
+      .result-label {
+        font-weight: bold;
+        color: blue;
+      }
     </style>
   </head>
   <body>
-    <div>
+    <div id="container">
       <img id="jelly" src="assets/jellyfish.jpeg">
       <div id="results">
         <span id="loading-status">Loading model...</span>

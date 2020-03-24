@@ -3,6 +3,7 @@
 
 let imgInputElem = document.getElementById('input');
 let imgOutputElem = document.getElementById('output');
+let statusElem = document.getElementById('status');
 
 const style = ml5.styleTransfer('./models/udnie/', styleTransferModelLoaded);
 
@@ -12,6 +13,7 @@ function init() {
     if (err) {
       console.log(err);
     } else {
+      statusElem.style.display = 'none';
       imgOutputElem.src = result.src;
     }
   });
