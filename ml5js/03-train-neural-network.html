@@ -10,11 +10,51 @@
     <style>
       html, body {
         margin: 0 auto;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1#title {
+        color: blue;
+        margin-right: 1em;
+      }
+      
+      #description { 
+        display: flex;
+        flex-direction: column;
+        margin-right: 2em;
+      }
+
+      p {
+        line-height: 2em;
+      }
+
+      a, a:active, a:visited {
+        color: blue;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
-    <div></div>
+    
+    <div id="description">
+      <h1 id="title">03 Training a Neural Network</h1>
+      <p>
+        1. Hold 'C', 'D', or 'E' while clicking around.<br/>
+        2. Press 'T' to train the model. <br/>
+        3. Click to see how new targets are classified (in blue).</br>
+        4. Open the <code>console</code> for more info.<br/><br/>
+        (code from Dan Shiffman's <a href="https://www.youtube.com/watch?v=8HEgeAbYphA" target="_blank">Train Your Own Neural Network</a> video.)
+        
+      </p>
+    </div>
+
     <script src="js/experiments/03-train-neural-network.js"></script>
   </body>
 </html>
